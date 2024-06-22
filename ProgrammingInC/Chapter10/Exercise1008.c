@@ -20,7 +20,6 @@
 // replacement string is the null string.
 
 // Kochan, Stephen G. Programming in C (p. 382). Pearson Education. Kindle Edition.
-// Exercise1008.c
 
 
 #include <stdio.h>
@@ -177,7 +176,7 @@ int main(int argc, char* argv[])
     replaceString(source, s1, s2);
     printf("Test 1 - source: [%s], expected: [%s], result: [%s] - %s\n", original, expected, source, strcmp(source, expected) == 0 ? "PASS" : "FAIL");
 
-    // Test 2 - Replace 'is' with 'was' in the string 'This is a test'
+    // Test 2 - Replace ' is' with ' was' in the string 'This is a test'
     strcpy(source, "This is a test");
     strcpy(original, "This is a test");
     strcpy(expected, "This was a test");
