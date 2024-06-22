@@ -42,7 +42,7 @@ void removeString(char* text, int start, int count)
         {
             if (start + count >= len) 
             {
-                text[start+1] = '\0';  // If count exceeds the remaining characters, just terminate at start
+                text[start] = '\0';  // If count exceeds the remaining characters, just terminate at start
             }
             else 
             {
@@ -156,7 +156,7 @@ int main()
     // Test 11 - start + count exceeds string length.
     strcpy(text, "abcdef");
     strcpy(result, "abcdef");
-    strcpy(expected, "abcd");
+    strcpy(expected, "abc");
     start = 3;
     count = 4;
     removeString(result, start, count);
