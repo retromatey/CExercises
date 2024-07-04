@@ -16,27 +16,26 @@
 void sort(char* proverbs[])
 {
 	char temp[MAX_INPUT] = { 0 };
-	int largest = 0;
+	int shortest = 0;
 
-	for (int i = 0; i < MAX_PROVERBS + 1 && proverbs[i] != NULL; i++)
+	for (int i = 0; i < MAX_PROVERBS - 1 && proverbs[i] != NULL; i++)
 	{
-		largest = i;
+		shortest = i;
 
 		for (int j = i + 1; j < MAX_PROVERBS && proverbs[j] != NULL; j++)
-		{
-			if (strlen(proverbs[i]) < strlen(proverbs[j]))
-			{
-				largest = j;
-			}
-		}
+			if (strlen(proverbs[shortest]) > strlen(proverbs[j]))
+				shortest = j;
 
-		strcpy(temp, proverbs[i]);
-		strcpy(proverbs[i], proverbs[largest]);
-		strcpy(proverbs[largest], temp);
+		if (shortest != i)
+		{
+			int* temp = proverbs[i];
+			proverbs[i] = proverbs[shortest];
+			proverbs[shortest] = temp;
+		}
 	}
 }
 
-int main(int argc, char *argv[])
+int main(int argc, char* argv[])
 {
 	char* proverbs[MAX_PROVERBS];
 	memset(proverbs, 0, sizeof(proverbs));
@@ -44,20 +43,28 @@ int main(int argc, char *argv[])
 	char input_buffer[MAX_INPUT] = { 0 };
 	int entry_num = 0;
 
-	while (strcmp(input_buffer, "end") != 0)
+	while (fgets(input_buffer, MAX_INPUT, stdin) != NULL)
 	{
-		fgets(input_buffer, MAX_INPUT, stdin);
-		int len = strlen(input_buffer);
-		input_buffer[len - 1] = '\0';
-
-		if (strcmp(input_buffer, "end") == 0)
-			break;
+        int len = strlen(input_buffer);
+        if (input_buffer[len - 1] == '\n')
+            input_buffer[len - 1] = '\0';
 
 		proverbs[entry_num] = strdup(input_buffer);		// disable the warning for strdup - _CRT_NONSTDC_NO_WARNINGS
+
+		if (proverbs[entry_num] == NULL)
+		{
+			printf("Failed to allocate memory for user input\n");
+			exit(1);
+		}
+
 		entry_num++;
 	}
 
 	sort(proverbs);
+
+	printf("\nPrinting proverbs from smallest to largest:\n");
+	for (int i = 0; i < entry_num; i++)
+		printf("%s\n", proverbs[i]);
 
 	for (int i = 0; i < entry_num; i++)
 		free(proverbs[i]);
