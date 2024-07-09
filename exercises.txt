@@ -1,0 +1,126 @@
+Exercise 7-1. Write a program to calculate the average for an arbitrary number of floating-point values that are entered from the keyboard. Store all values in memory that's allocated dynamically cally before calculating and displaying the average. The user shouldn't be required to specify in advance how many values there will be.
+
+Ivor Horton. Beginning C: From Novice to Professional, Fourth Edition (p. 294). Kindle Edition. 
+
+
+Exercise 7-4. Write a program that will read a series of temperature recordings as floating-point values for an arbitrary number of days, in which six recordings are made per day. The temperature ture readings should be stored in an array that's allocated dynamically and that's the correct dimensions for the number of temperature values that are entered. Calculate the average temperature per day, and then output the recordings for each day together, with the average on a single line with one decimal place after the point.
+
+Ivor Horton. Beginning C: From Novice to Professional, Fourth Edition (p. 294). Kindle Edition. 
+
+
+
+Exercise 6-1. Write a program that will prompt for and read a positive integer less than 1000 from the keyboard, and then create and output a string that is the value of the integer in words. For example, if 941 is entered, the program will create the string "Nine hundred and forty one".
+
+Ivor Horton. Beginning C: From Novice to Professional, Fourth Edition (p. 240). Kindle Edition. 
+
+
+Exercise 9-1. A function with the prototype double power(double x, int n); should calculate and return the value of xn. That is, the expression power (5-0, 4) will evaluate 5.0 * 5.0 * 5.0 * 5.0, which will result in the value 625.0. Implement the power() function as a recursive function (so it should call itself) and demonstrate strate its operation with a suitable version of main O.
+
+Ivor Horton. Beginning C: From Novice to Professional, Fourth Edition (p. 372). Kindle Edition. 
+
+
+
+Exercise 9-2. Implement functions with the prototypes double add(double a, double b); /* Returns a+b double subtract(double a, double b); /* Returns a-b */ double multiply(double a, double b); /* Returns a*b double array_op(double array[], int size, double (*pfun)(double,double)); The parameters for the array_op () function are the array to be operated on, the number of elements in the array, and a pointer to a function defining the operation to be applied between successive elements. The array_op () function should be implemented so that when the subtract () function is passed as the third argument, the function combines the elements with alternating signs. So for an array with four elements, x1, x2, x3, and x4, it computes the value of xl - x2 + x3 - x4. Demonstrate the operation of these functions with a suitable version of main o.
+
+Ivor Horton. Beginning C: From Novice to Professional, Fourth Edition (p. 372). Kindle Edition. 
+
+
+
+
+Exercise 9-3. Define a function that will accept an array of pointers to strings as an argument and return a pointer to a string that contains all the strings joined into a single string, each terminated by a newline character. If an original string in the input array has newline as its last character, the function shouldn't add another to the string. Write a program to demonstrate this function in operation by reading a number of strings from the keyboard and outputting the resultant combined string.
+
+Ivor Horton. Beginning C: From Novice to Professional, Fourth Edition (p. 372). Kindle Edition. 
+
+
+
+Exercise 11-1. Define a struct type with the name Length that represents a length in yards, feet, and inches. Define an add () function that will add two Length arguments and return the sum as type Length. Define a second function, show(), that will display the value of its Length argument. Write a program that will use the Length type and the add () and show() functions to sum an arbitrary number of lengths in yards, feet, and inches that are entered from the keyboard and output the total length.
+
+Ivor Horton. Beginning C: From Novice to Professional, Fourth Edition (p. 466). Kindle Edition. 
+
+
+
+Exercise0508.c
+(8) A survey of 10 pop records is made. Each person votes by specifying three values (each from 1 to 10), in order, representing their choice of first, second and third. First choice scores 4 points, second choice scores 2 points and third choice scores I point. Data consists of the names of the 10 records followed by the voters' choices. Write a program to read the data, process the votes and print the most popular record. Appropriate validation should be done, for example, that a person does not vote for the same record more than once.
+
+Noel Kalicharan. C by Example (Cambridge Computer Science Texts) (p. 158). Kindle Edition. 
+
+
+
+Exercise0702.c
+(2) Each line of data consists of a student's name followed by marks (out of 100) made in three assignments. Data is terminated by the name "END". Using structures, write a C program to read the data, and for each student, calculate the average mark obtained. Output your results under suitable headings. For each student, print the name, the three marks, the average and a message `Pass' or 'Fail'. (A student passes if the average is greater than or equal to 50). At the end, print the number of students processed, the number who passed, the number who failed and the name of the student obtaining the highest average. (Ignore the possibility of a tie). Also determine the class average for each of the three assignments. Modify the program to list the students in (a) alphabetical order (b) in descending order by average mark.
+
+Noel Kalicharan. C by Example (Cambridge Computer Science Texts) (p. 217). Kindle Edition. 
+
+
+
+Exercise0708.c
+(8) Write a function to sort a linked list of integers as follows: (a) Find the node with the smallest value in the list. (b) Interchange its `data' with that at the top of the list. (c) Starting from what is now the second element, repeat (a) and interchange its `data' with that of the second element. Continue until the list is sorted.
+
+Noel Kalicharan. C by Example (Cambridge Computer Science Texts) (p. 218). Kindle Edition. 
+
+
+Exercise0709.c
+(9) Write a function to sort a linked list of integers as follows: (a) Find the largest value in the list. (b) Delete it from its position and insert it at the head of the list. (c) Starting from what is now the second element, repeat (a) and (b). (d) Starting from what is now the third element, repeat (a) and (b). Continue until the list is sorted.
+
+Noel Kalicharan. C by Example (Cambridge Computer Science Texts) (p. 218). Kindle Edition. 
+
+
+
+Exercise0710.c
+(10) Write a function which, given pointers to two sorted linked lists of integers, merges the two lists into one sorted list. No new storage should be allocated for the merged list. The merged list should consist of the original cells of the given lists; only pointers should be changed. The function should return a pointer to the merged list.
+
+Noel Kalicharan. C by Example (Cambridge Computer Science Texts) (p. 218). Kindle Edition. 
+
+
+
+
+Exercise0712.c
+(12) Write a function which, given a pointer to a linked list, returns the number of nodes in the list. 
+
+Exercise0713.c
+(13) Write a function which, given a pointer to a linked list and key, searches for key in the list. If found, return a pointer to the node in which key is found; otherwise, return NULL. 
+
+Exercise0714.c
+(14) The letters of a word are stored in a linked list, one letter per node. Write C statements to reverse the letters of the word. 
+
+Exercise0715.c
+(15) Write a function which determines if the nodes in a list are in order.
+
+Exercise0716.c
+(16) Write a function which, given a pointer to a linked list, returns a pointer to the last node of the list.
+
+Noel Kalicharan. C by Example (Cambridge Computer Science Texts) (p. 219). Kindle Edition. 
+
+
+
+
+Exercise0717.c
+(17) A linked list is used to represent a polynomial, each element of the list representing one (non-zero) term of the polynomial. The `data' for each term consists of a coefficient and an exponent. The terms are stored in order of decreasing exponent and no coefficient is 0. Write a function to read (coefficient, exponent) pairs and create the linked list representing the polynomial. Given that first and second each point to a polynomial, write C code to evaluate the sum of the polynomials, and store the sum in a newly created list pointed at by sum. (Be careful not to include terms with zero coefficient in the sum). Write a function which, given a pointer to a polynomial and a value x, returns the value of the polynomial evaluated at x.
+
+Noel Kalicharan. C by Example (Cambridge Computer Science Texts) (p. 219). Kindle Edition. 
+
+
+
+Exercise0718.c
+(18) A data file contains registration information for six courses - CS20A, CS21A, CS29A, CS30A, CS35A and CS36A. Each line of data consists of a 6-digit student registration number followed by a student name (ended with $) followed by six (ordered) values, each of which is 0 or 1. (A registration number of 0 terminates the data). A value of 1 indicates that the student is registered for the corresponding course; 0 means he is not. Thus 10 10 1 1 means that the student is registered for CS20A, CS29A, CS35A and CS36A, but not for CS21A and CS30A. You may assume that there are no more than 100 students. Write a program to read the data and produce a class list for each of the six courses. Each list begins on a new page and consists of a heading, e.g., Class List For CS20A, followed by the registration numbers and names of those students taking the course. Include options which allow the class list to be printed in order by registration number or in alphabetical order by name.
+
+Noel Kalicharan. C by Example (Cambridge Computer Science Texts) (p. 219). Kindle Edition. 
+
+
+
+Exercise0719.c
+(19) Write a program to read and store a thesaurus as follows. Data for the program consists of lines of input. Each line contains a (variable) number of distinct words, all of which are synonyms. The words are to be inserted in a hash table and synonyms are held on a sorted linked list. A word can appear on more than one line, but each word must be inserted only once in the table. (If a word appears on another line, then the words on that line would be inserted in an existing list). Data is terminated by a line containing ENDOFSYNONYMS. After the thesaurus has been built, selected words are read and printed with an alphabetic list of all their synonyms. 
+
+
+Exercise0720.c
+(20) Write a program to read students' data and produce two listings as described below. Each line of data consists of a 5-digit student number, a name (terminated by *), a telephone number, and six numeric values - the first five are assignment marks (out of 25) and the sixth is an examination mark (out of 100). The assignments count for 25% of the final mark and the examination counts for 75%. The students' data are to be stored in an array of structures. For each student, the final numeric mark, a, is calculated. The letter grade is then calculated as follows: Letter grade o= Numeric score F a < µ - 3Q/2 D -3a/2 < a < µ-a/2 - Q/2 a < µ + Q12 C B µ+o/2Sa<p+3r/2 A µ+3a/2 5 at where µ is the mean numeric score and o is the standard deviation. The first listing to be produced consists of student's name, assignment marks, course-work mark (out of 25), examination mark (out of 100), examination percentage (out of 75), final numeric score and letter grade, arranged in alphabetical order by name. The second listing to be produced consists of the same information as above, but arranged so that the numeric scores are in descending order.
+
+Noel Kalicharan. C by Example (Cambridge Computer Science Texts) (p. 220). Kindle Edition. 
+
+
+
+
+
+
+
+
