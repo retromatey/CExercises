@@ -14,13 +14,15 @@ Exercise 6-1. Write a program that will prompt for and read a positive integer l
 Ivor Horton. Beginning C: From Novice to Professional, Fourth Edition (p. 240). Kindle Edition. 
 
 
-Exercise 9-1. A function with the prototype double power(double x, int n); should calculate and return the value of xn. That is, the expression power (5-0, 4) will evaluate 5.0 * 5.0 * 5.0 * 5.0, which will result in the value 625.0. Implement the power() function as a recursive function (so it should call itself) and demonstrate strate its operation with a suitable version of main O.
-
-Ivor Horton. Beginning C: From Novice to Professional, Fourth Edition (p. 372). Kindle Edition. 
 
 
 
-Exercise 9-2. Implement functions with the prototypes double add(double a, double b); /* Returns a+b double subtract(double a, double b); /* Returns a-b */ double multiply(double a, double b); /* Returns a*b double array_op(double array[], int size, double (*pfun)(double,double)); The parameters for the array_op () function are the array to be operated on, the number of elements in the array, and a pointer to a function defining the operation to be applied between successive elements. The array_op () function should be implemented so that when the subtract () function is passed as the third argument, the function combines the elements with alternating signs. So for an array with four elements, x1, x2, x3, and x4, it computes the value of xl - x2 + x3 - x4. Demonstrate the operation of these functions with a suitable version of main o.
+Exercise 9-2. Implement functions with the prototypes 
+double add(double a, double b); /* Returns a+b 
+double subtract(double a, double b); /* Returns a-b */ 
+double multiply(double a, double b); /* Returns a*b 
+double array_op(double array[], int size, double (*pfun)(double,double)); 
+The parameters for the array_op () function are the array to be operated on, the number of elements in the array, and a pointer to a function defining the operation to be applied between successive elements. The array_op () function should be implemented so that when the subtract () function is passed as the third argument, the function combines the elements with alternating signs. So for an array with four elements, x1, x2, x3, and x4, it computes the value of xl - x2 + x3 - x4. Demonstrate the operation of these functions with a suitable version of main().
 
 Ivor Horton. Beginning C: From Novice to Professional, Fourth Edition (p. 372). Kindle Edition. 
 
