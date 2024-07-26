@@ -9,20 +9,26 @@
 // Kochan, Stephen G. Programming in C, Fourth Edition
 
 #include <stdio.h>
+#include <stdbool.h>
 
 int main(void)
 {
-	int ratingCounters[11], i, response;
+	int ratingCounters[11] = { 0 };
+	int i;
+	int response;
 
 	for (i = 1; i <= 10; ++i)
 		ratingCounters[i] = 0;
 
 	printf("Enter your responses. Enter 999 to end.\n");
 
-	for (i = 1; i <= 20; ++i)
+	while (true)
 	{
-		if (scanf("%i", &response))
+		if (scanf("%i", &response) == 1)
 		{
+			if (response == 999)
+				break;
+
 			if (response < 1 || response > 10)
 				printf("Bad response: %i\n", response);
 			else
