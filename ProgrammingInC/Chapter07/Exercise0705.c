@@ -16,23 +16,6 @@ float  absoluteValue(float x)
 	return x < 0 ? -x : x;
 }
 
-//// Function to compute the square root of a number
-//float squareRoot(float x)
-//{
-//	const float epsilon = .00001f;
-//	float guess = 1.0;
-//
-//	while (absoluteValue(guess * guess - x) >= epsilon)
-//	{
-//		guess = (x / guess + guess) / 2.0f;
-//	    printf("\tguess = %.5f\n", guess);
-//	}
-//
-//	return guess;
-//}
-
-// Function to compute the square root of a number using the new termination criteria:
-// compare the ratio of the two values to 1
 float squareRoot(float x)
 {
 	const float epsilon = .00001f;
