@@ -114,6 +114,7 @@ int main(void)
 	test(8, -16, 0, true, 2.0, 0.0);
 	test(1, 0, -9, true, 3.0, -3.0);
 
+	// TODO for the future
 	// What if there's only one solution?
 	// How to handle the roots getting mixed and failing the test?
 	// Test the imaginary roots scenario
