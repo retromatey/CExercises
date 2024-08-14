@@ -27,30 +27,43 @@ void display_matrix(int* n[], int rows, int columns)
 	}
 }
 
-void transposeMatrix(int* n[], int* m[])
+void transposeMatrix(int* n[], int* m[], int n_rows, int n_columns)
 {
-	n[0][0] = 0;
-	m[0][0] = 0;
+	for (int i = 0; i < n_rows; i++)
+	{
+		for (int j = 0; j < n_columns; j++)
+		{
+			m[j][i] = n[i][j];
+		}
+	}
 }
 
-void test_runner(int* n[], int* m[])
+void test_runner(int* n[], int* m[], int n_rows, int n_columns)
 {
-	display_matrix(n, 4, 5);
-	display_matrix(m, 5, 4);
+	transposeMatrix(n, m, n_rows, n_columns);
+	display_matrix(n, n_rows, n_columns);
+	display_matrix(m, n_columns, n_rows);
 }
 
 int main(void)
 {
-	int n[4][5] = {
-		{ 1, 2, 3, 4, 5 },
-		{ 1, 2, 3, 4, 5 },
-		{ 1, 2, 3, 4, 5 },
-		{ 1, 2, 3, 4, 5 },
-	};
+	int n_rows = 4;
+	int n_columns = 5;
 
-	int m[5][4] = { 0 };
+	int* n[4];
+	n[0] = (int[5]){ 1,  2,  3,  4,  5 };
+	n[1] = (int[5]){ 6,  7,  8,  9, 10 };
+	n[2] = (int[5]){ 11, 12, 13, 14, 15 };
+	n[3] = (int[5]){ 16, 17, 18, 19, 20 };
 
-	test_runner(n, m);
+	int* m[5];
+	m[0] = (int[4]){ 0 };
+	m[1] = (int[4]){ 0 };
+	m[2] = (int[4]){ 0 };
+	m[3] = (int[4]){ 0 };
+	m[4] = (int[4]){ 0 };
+
+	test_runner(n, m, n_rows, n_columns);
 
 	return 0;
 }
