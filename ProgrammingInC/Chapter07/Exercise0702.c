@@ -1,7 +1,10 @@
 // Exercise: 7.2
-// Modify Program 7.4 so the value of triangularNumber is returned by the function. 
-// Then go back to Program 4.5 and change that program so that it calls the new 
+//
+// Modify Program 7.4 so the value of triangularNumber is returned by the function.
+// Then go back to Program 4.5 and change that program so that it calls the new
 // version of the calculateTriangularNumber() function.
+//
+// Kochan, Stephen G. Programming in C, Fourth Edition
 
 #include <stdio.h>
 
@@ -19,7 +22,7 @@ int main(void)
 {
     int number, triangularNumber, counter;
 
-    for (counter = 1; counter <= 5; ++counter) 
+    for (counter = 1; counter <= 5; ++counter)
     {
         printf("What triangular number do you want? ");
 
@@ -41,18 +44,18 @@ int main(void)
 
 
 // Sample output:
-// 
+//
 // What triangular number do you want ? 12
 // Triangular number 12 is 78
-// 
+//
 // What triangular number do you want ? 25
 // Triangular number 25 is 325
-// 
+//
 // What triangular number do you want ? 50
 // Triangular number 50 is 1275
-// 
+//
 // What triangular number do you want ? 75
 // Triangular number 75 is 2850
-// 
+//
 // What triangular number do you want ? 83
 // Triangular number 83 is 3486
